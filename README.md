@@ -17,11 +17,11 @@ The first one is `Handle` which will blocked on SIGINT and SIGTERM signals until
 
 ```go
 func main() {
-  // some things to be defined
+    // some things to be defined
 
-  go exithandler.Handle(ctx, func(context.Context) {
-    // some things to close or execute when the program terminates
-  })
+    go exithandler.Handle(ctx, func(context.Context) {
+        // some things to close or execute when the program terminates
+    })
 }
 ```
 
@@ -29,14 +29,14 @@ The second one is `HandleFunc` which does the exact same thing, the only differe
 
 ```go
 func main() {
-  // some things to be defined
+    // some things to be defined
 
-  exithandler := exithandler.HandleFunc(ctx, func(context.Context) {
-    // some things to close or execute when the program terminates
-  })
+    exithandler := exithandler.HandleFunc(ctx, func(context.Context) {
+        // some things to close or execute when the program terminates
+    })
 
-  // other things to do
+    // other things to do
 
-  exithandler()
+    exithandler()
 }
 ```
