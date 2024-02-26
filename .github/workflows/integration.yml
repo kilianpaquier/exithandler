@@ -3,7 +3,9 @@
 name: Go Integration
 run-name: Go Integration
 
-on: push
+on:
+  - push
+  - workflow_dispatch
 
 jobs:
 
