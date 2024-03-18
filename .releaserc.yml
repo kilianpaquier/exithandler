@@ -35,6 +35,7 @@ plugins:
 
           - { type: build, section: Build System, hidden: true }
           - { type: ci, section: Continuous Integration, hidden: true }
+          - { scope: ci, section: Continuous Integration, hidden: true }
           - { type: style, section: Styles, hidden: true }
           - { type: test, section: Tests, hidden: true }
       parserOpts:
