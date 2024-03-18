@@ -14,8 +14,6 @@ plugins:
       - { type: refactor, release: minor }
 
       - { scope: release, release: false }
-      - { type: ci, release: false }
-      - { scope: ci, release: false }
       parserOpts:
         noteKeywords:
           - BREAKING CHANGE
@@ -35,7 +33,6 @@ plugins:
 
           - { type: build, section: Build System, hidden: true }
           - { type: ci, section: Continuous Integration, hidden: true }
-          - { scope: ci, section: Continuous Integration, hidden: true }
           - { type: style, section: Styles, hidden: true }
           - { type: test, section: Tests, hidden: true }
       parserOpts:
