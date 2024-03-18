@@ -12,7 +12,10 @@ plugins:
       - { type: docs, release: patch }
       - { type: chore, release: patch }
       - { type: refactor, release: minor }
+
       - { scope: release, release: false }
+      - { type: ci, release: false }
+      - { scope: ci, release: false }
       parserOpts:
         noteKeywords:
           - BREAKING CHANGE
@@ -42,7 +45,9 @@ plugins:
   - "@semantic-release/changelog"
   - "semantic-release-license"
   - - "@semantic-release/git"
-    - assets: [ "CHANGELOG.md", "LICENSE" ]
+    - assets:
+        - CHANGELOG.md
+        - LICENSE
       message: "chore(release): v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
   - - "@semantic-release/github"
     - assets:
