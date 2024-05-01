@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/kilianpaquier/exithandler/compare/v1.0.0...v1.0.1) (2024-05-01)
+
+
+### Chores
+
+* **deps:** bump golangci/golangci-lint-action from 4 to 5 ([31e5b70](https://github.com/kilianpaquier/exithandler/commit/31e5b70ac7a2a50425ec535de844498081f483c6))
+* **golangci:** remove govet deleted option ([caa5018](https://github.com/kilianpaquier/exithandler/commit/caa50185eacd7880dc2d7c8d6e650b8cc3ea3f32))
+* **go:** update go to 1.22.2 ([458e059](https://github.com/kilianpaquier/exithandler/commit/458e0595e698a19e1751f43964c3425c51bd1449))
+
 ## 1.0.0 (2024-03-18)
 
 
