@@ -2,7 +2,7 @@
 
 # exithandler <!-- omit in toc -->
 
-**Archive note:** Just copy/paste the related code to listening to context signal 😉.
+**Archive note:** Just copy/paste the related code listening to context signal 😉.
 
 <p align="center">
   <img alt="GitHub Actions" src="https://img.shields.io/github/actions/workflow/status/kilianpaquier/exithandler/integration.yml?branch=main&style=for-the-badge">
