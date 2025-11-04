@@ -35,13 +35,13 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - id: sha
         run: echo "sha=$(echo "$GITHUB_REF_NAME" | sha256sum | cut -c -8)" >> $GITHUB_OUTPUT
       # https://github.com/marketplace/actions/action-for-semantic-release
       - id: semantic_release
         continue-on-error: true
-        uses: cycjimmy/semantic-release-action@v4
+        uses: cycjimmy/semantic-release-action@v5
         with:
           semantic_version: 23
           extra_plugins: |
@@ -95,12 +95,12 @@ jobs:
     if: github.ref_protected == true
     environment: release
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           persist-credentials: false
       # https://github.com/marketplace/actions/action-for-semantic-release
       - id: semantic-release
-        uses: cycjimmy/semantic-release-action@v4
+        uses: cycjimmy/semantic-release-action@v5
         with:
           semantic_version: 23
           extra_plugins: |
