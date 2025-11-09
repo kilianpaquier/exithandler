@@ -53,15 +53,15 @@ jobs:
     permissions:
       checks: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
         with:
           cache: false
           check-latest: true
           go-version-file: go.mod
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: mkdir -p reports/
-      - uses: golangci/golangci-lint-action@v5
+      - uses: golangci/golangci-lint-action@v9
         with:
           args: --config .golangci.yml --timeout 240s --fast --sort-results --out-format checkstyle:reports/go-ci-lint.checkstyle.xml,colored-line-number
 
@@ -79,15 +79,15 @@ jobs:
     env:
       OS: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
         with:
           check-latest: true
           go-version-file: go.mod
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: mkdir -p reports/
       - run: go test ./... -coverpkg="./..." -covermode="count" -coverprofile="reports/go-coverage.native.out"
-      - uses: codecov/codecov-action@v4
+      - uses: codecov/codecov-action@v5
         if: ${{ ! startsWith(github.head_ref, 'dependabot') }} # ignore codecov on dependabot branches
         with:
           codecov_yml_path: .codecov.yml
